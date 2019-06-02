@@ -47,8 +47,16 @@ test:
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
-production:
-  <<: *default
-  database: pictweet_production
-  username: pictweet
-  password: <%= ENV['PICTWEET_DATABASE_PASSWORD'] %>
+
+# production:
+#   <<: *default
+#   database: pictweet_production
+#   username: pictweet
+#   password: <%= ENV['PICTWEET_DATABASE_PASSWORD'] %>
+
+  production:
+  #半角スペース２個分の空白を開ける
+    <<: *default
+    adapter: postgresql
+    encoding: unicode
+    pool: 5
