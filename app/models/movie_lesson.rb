@@ -1,0 +1,2 @@
+class MovieLesson < ApplicationRecord
+end

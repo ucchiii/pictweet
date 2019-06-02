@@ -1,0 +1,16 @@
+<div class="contents row">
+  <!-- formタグを作成することで、ビューから情報を送信できる -->
+  <!-- Railsでは、form_tagなどのヘルパーメソッドを使用する -->
+  <!-- 下の場合は/tweetsがパス、:postがhttpメソッド名というリクエストを返す -->
+  <!-- httpメソッドpostは、情報の登録などの際、サーバーに情報を送信するために利用 -->
+  <div class="container">
+    <%= form_tag('/tweets', method: :post) do %>
+      <h3>
+        投稿する
+      </h3>
+      <input placeholder="Image URL" type="text" name="image" autofocus="true">
+      <textarea placeholder="text" name="text" cols="30" rows="10"></textarea>
+      <input type="submit" value="SENT">
+    <% end %>
+  </div>
+</div>

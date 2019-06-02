@@ -1,0 +1,10 @@
+<!-- コントローラのメソッドひとつにつき、ひとつ存在 -->
+<div class="contents row" >
+  <% @tweets.each do |tweet| %><!-- 全てのレコードが入っている配列を「tweet」という変数に置き換えて、eachでレコード一つ一つを取り出していく -->
+    <%= render partial: "tweet", locals: { tweet: tweet } %>
+    <!-- { tweet: tweet } の右側の tweet はeachメソッド内の変数としてのtweetでtweetのインスタンスを示し、
+    そのtweetを左のtweetに代入している状態（変数） -->
+  <% end %>
+  <%= paginate(@tweets) %>
+  <!-- ページネーションのリンクを表示 -->
+</div>
