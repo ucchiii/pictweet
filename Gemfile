@@ -72,3 +72,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'sprockets', '3.7.2'
   gem 'kaminari'
   gem 'devise'
+
+group :production do
+  gem 'pg'
+end
